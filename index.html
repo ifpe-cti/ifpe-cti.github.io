@@ -34,59 +34,38 @@
               <div class="card my-4">d</div>
               <div class="card my-4">d</div>
               <div class="card my-4">d</div>
-              
 
           </div>
-          <div id="container_post" class="col-md-8">
-
-
-          </div>
-
+          <div id="container_post" class="col-md-8"></div>
         </section>
-
-
-
-     <!-- <section class="row">
-        <div class="col-10 bg-info">
-          conteúdo
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet natus, ab molestias cupiditate soluta odit nihil perspiciatis magnam veniam velit molestiae ducimus rerum ipsam, eum animi officia, dolores adipisci facere?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, a dicta. Quam voluptatum repellat accusamus, quo totam consequuntur cum molestias id numquam distinctio possimus placeat modi deserunt. Iure, dolores animi.</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatem eveniet numquam fugit tenetur delectus cum ipsam expedita maxime quia eos sequi, et, blanditiis quo modi laborum velit quibusdam labore.</p>
-        </div>
-        <div class="col-2 bg-info">
-          menu
-          <ul>
-            <li>
-              <a href="1">Contato</a>
-            </li>
-            <li>
-              <a href="2">Fotos</a>
-            </li>
-            <li>
-              <a href="3">Fale comigo</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="row">
-        <div class="col bg-warning">"Auto"</div>
-        <div class="col bg-warning">"Auto"</div>
-        <div class="col bg-warning">"Auto"</div>
-
-        <div class="col bg-warning">"Auto"</div>
-        <div class="col bg-warning">"Auto"</div>
-        <div class="col bg-warning">"Auto"</div>
-      </section>-->
     </section>
-    
     <script>
       
-      let $container_post = document.getElementById('container_post');
-     
-        for(var i =0; i<5; i++) {
-          $container_post.innerHTML += "<div class='card mb-4'><img class='card-img-top' src='http://placehold.it/750x300' alt='Card image cap'><div class='card-body'><h2 class='card-title'>Post Title</h2><p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p><a href='#' class='btn btn-primary' style=''>Read More →</a></div><div class='card-footer text-muted'>Posted on January 1, 2017 by<a href='#'>Start Bootstrap</a></div></div>"
 
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://raw.githubusercontent.com/joelhenrique2000/ifpe-cti.github.io/master/src/main/index/post.json');
+          
+      xhr.addEventListener("load", function(){
+        var response = xhr.responseText;
+        posts = JSON.parse(response);
+        let $container_post = document.getElementById('container_post');
+        console.log(posts)
+        
+        for(let i=0; i<posts.length; i++){
+          $container_post.innerHTML +=
+              "<div class='card mb-4'>" +
+              "  <img class='card-img-top' src='"+posts[i].meta_info.url_imagem+"' alt='"+posts[i].meta_info.titulo+"'>" +
+              "  <div class='card-body'>" +
+              "  <h2 class='card-title'>"+posts[i].meta_info.titulo+"</h2>" +
+              "  <p class='card-text'>"+posts[i].meta_info.descricao+"</p>" +
+              "  <a href='"+posts[i].meta_info.link_post+"' class='btn btn-primary' style=''>Leia mais →</a>" + 
+              "</div>" + 
+              "<div class='card-footer text-muted'>Postado em "+posts[i].meta_info.data+" por<a href='"+posts[i].meta_info.github_page+"'>"+posts[i].meta_info.autor+"</a></div></div>";
         }
+        
+      });
+
+      xhr.send();
     
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
