@@ -1,0 +1,7 @@
+body {
+    background-color: chartreuse;
+    background-image: url('../images/Desert.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh;
+}

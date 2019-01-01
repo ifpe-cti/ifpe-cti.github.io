@@ -1,0 +1,31 @@
+{
+  "name": "webpack-template-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "keywords": [
+    "template",
+    "webpack 4",
+    "webpack",
+    "basic"
+  ],
+  "author": "Joel Henrique Silva Santos",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "css-loader": "^2.0.1",
+    "file-loader": "^2.0.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "cross-env": "^5.2.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "uglifyjs-webpack-plugin": "^2.0.1"
+  }
+}
