@@ -17,3 +17,7 @@ export const Container = styled.div`
     align-items: center;
     padding: 15px 0;
 `
+
+export const ContainerAction = styled.div`
+
+`

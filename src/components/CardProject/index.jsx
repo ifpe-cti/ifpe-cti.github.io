@@ -1,17 +1,24 @@
 import React from 'react'
-import { Card, Container } from './styles'
+import { Card, Container, ContainerAction } from './styles'
+import ButtonIcon from '../ButtonIcon'
 
 export default class CardProject extends React.Component {
 
 
     render() {
         return (
-            <Container>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-            </Container>
+            <Card>
+                <ContainerAction>
+                    <ButtonIcon
+                        icon={"fa-bars"}
+                        value={"download"}
+                    />
+                    <ButtonIcon
+                        icon={"fa-bars"}
+                        value={"página"}
+                    />
+                </ContainerAction>
+            </Card>
         )
     }
 }
