@@ -24,7 +24,6 @@ export const ContainerAction = styled.div`
     button {
         margin: 5px 3px 15px 3px;
     }
-
 `
 
 export const Info = styled.div`
