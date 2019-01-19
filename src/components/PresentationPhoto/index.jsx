@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import '../../assets/css/reset.css'
+
 
 export default class PresentationPhoto extends Component {
 
@@ -8,10 +10,9 @@ export default class PresentationPhoto extends Component {
 
     render() {
         return (
-            <h1>
-                <img src={this.props.src} alt="Campus do ifpe Garanhuns"/>
-                
-            </h1>
+            <header>
+                <img src={this.props.src} alt="Campus do ifpe Garanhuns" />
+            </header>
         )
     }
 
