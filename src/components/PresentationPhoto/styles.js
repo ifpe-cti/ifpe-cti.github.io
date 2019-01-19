@@ -2,21 +2,10 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
     body, html {
-        height: 100%;
         margin: 0;
         font: 400 15px/1.8 "Lato", sans-serif;
         color: #777;
     }
-`
-
-export const ContainerImage = styled.div`
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    color: #000;
-    background: red;
 `
 
 export const BackgroundOpacity = styled.div`
@@ -110,6 +99,7 @@ export const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%; 
 
     @media (max-width: 575.98px) {
         height: ${props => props.heightProps === 'auto' ? '185px' : props.heightProps};

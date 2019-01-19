@@ -1,13 +1,17 @@
 import React from 'react'
+import { Card, Container } from './styles'
 
 export default class CardProject extends React.Component {
-    
-    
-    render(){
-        return(
-            <h1>
-                oi
-            </h1>
+
+
+    render() {
+        return (
+            <Container>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+            </Container>
         )
     }
 }

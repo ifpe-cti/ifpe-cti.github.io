@@ -3,11 +3,12 @@ import PresentationPhoto from './components/PresentationPhoto'
 import CardProject from './components/CardProject'
 import campus from './assets/img/campus.jpg'
 import logoCti from './assets/img/ctiLogoBranca.png'
+import './index.css'
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div >
         <PresentationPhoto
           color={'#0F6B99'}
           backgroundImage={campus}
@@ -15,7 +16,6 @@ class App extends Component {
           logo={logoCti}
         />
         <CardProject/>
-        sadasd
       </div>
     );
   }
