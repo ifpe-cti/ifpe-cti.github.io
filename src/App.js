@@ -15,7 +15,15 @@ class App extends Component {
           height={"auto"}
           logo={logoCti}
         />
-        <CardProject value={"asdpojas daos jdapos djpao"}/>
+        <CardProject 
+          value={"asdpojas daos jdapos djpao"}
+          name={"asadoj adsoa jdoa sjdojosa jd"}
+          issuesNumber={"8"}
+          contributors={"João da Silva, Aldarbeto Liro, Ademaul Sactus, Lorival Aliral"}
+          language={"Java"}
+          createdAt={"15/05/2018"}
+          license={"nenhuma"}
+          />
       </div>
     );
   }
