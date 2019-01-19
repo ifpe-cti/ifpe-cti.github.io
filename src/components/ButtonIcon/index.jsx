@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import { Button } from './styles'
+import { Button, Text } from './styles'
 
 export default class BottonIcon extends Component {
     render() {
         return (
-            <Button>
+            <Button color={this.props.color} colorHover={this.props.colorHover}>
                 <FontAwesomeIcon icon={faCoffee}/>
-                {this.props.value}
+                <Text>{this.props.value}</Text>
             </Button>
         )
     }

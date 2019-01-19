@@ -15,7 +15,7 @@ class App extends Component {
           height={"auto"}
           logo={logoCti}
         />
-        <CardProject/>
+        <CardProject value={"asdpojas daos jdapos djpao"}/>
       </div>
     );
   }
