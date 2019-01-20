@@ -14,12 +14,16 @@ class ProjectList extends React.Component {
     render() {
         const renderTows = () => {
             const listRepos = this.props.list || []
-            const asd = [0, 1, 2, 3, 4, 5, 6]
-            console.log(listRepos)
-            console.log(this.props.nameNew)
+
             return listRepos.map(project => (
                 <CardProject
-                    name={project.name}    
+                    key={project.id}
+                    name={project.name}   
+                    language={project.language === null ? "não informado" : project.language} 
+                    lincense={project.lincense === null ? "não informado" : project.lincense}
+                    createdAt={project.created_at}
+                    description={project.description}
+                    svn_url={project.svn_url}
                 />
             ))
 

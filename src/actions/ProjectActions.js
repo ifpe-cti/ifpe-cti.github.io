@@ -12,7 +12,7 @@ export const repository = () => ({
 export const clickButton = value => ({
     type: 'CLICK_UPDATE_VALUE',
     newValue: value
-  });
+});
 
 export const generateList = () => {
     return (dispatch) => {
@@ -22,4 +22,8 @@ export const generateList = () => {
                 payload: resp.data
             }))
     }
+}
+
+export const generateListProjects = () => {
+    
 }
