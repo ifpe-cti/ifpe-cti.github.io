@@ -7,15 +7,15 @@ import './index.css'
 
 class App extends Component {
   render() {
-    return ( 
+    return (
       <div>
         <PresentationPhoto
           color={'#0F6B99'}
           backgroundImage={campus}
           height={"auto"}
-          logo={logoCti}/>
-
-        <ProjectList/>
+          logo={logoCti}
+        />
+        <ProjectList />
       </div>
     );
   }

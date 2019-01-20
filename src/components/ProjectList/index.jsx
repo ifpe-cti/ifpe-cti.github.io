@@ -3,6 +3,7 @@ import CardProject from '../CardProject'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import { generateList } from '../../actions/ProjectActions'
+import { ContainerCardProject } from './styles'
 
 class ProjectList extends React.Component {
 
@@ -28,8 +29,6 @@ class ProjectList extends React.Component {
             ))
 
 
-
-
             /*return list.map(project => (
                 <CardProject
                     key={project.id}
@@ -44,18 +43,15 @@ class ProjectList extends React.Component {
         }
 
         return (
-            <div>
+            <ContainerCardProject>
                 {renderTows()}
-            </div>
+            </ContainerCardProject>
         )
 
 
     }
 
 }
-
-
-
 
 const mapStateToProps = state => ({
     nameNew: state.projectState.nameNew,
