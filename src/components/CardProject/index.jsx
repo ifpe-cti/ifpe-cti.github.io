@@ -34,7 +34,6 @@ export default class CardProject extends React.Component {
                         />
                     </ContainerAction>
                 </div>
-
             </Card>
         )
     }
