@@ -1,19 +1,26 @@
 import React from 'react'
 import CardProject from '../CardProject'
 import { connect } from 'react-redux'
-import { bindActionCreators } from '../../../../../AppData/Local/Microsoft/TypeScript/3.2/node_modules/redux';
+import { bindActionCreators } from 'redux';
+import { generateList } from '../../actions/ProjectActions'
 
 class ProjectList extends React.Component {
 
+    constructor(props) {
+        super(props)
+        this.props.generateList()
+    }
 
     render() {
         const renderTows = () => {
             const listRepos = this.props.list || []
             const asd = [0, 1, 2, 3, 4, 5, 6]
-            
+            console.log(listRepos)
             console.log(this.props.nameNew)
-            return asd.map(project => (
-                project + '     ' + this.props.nameNew
+            return listRepos.map(project => (
+                <CardProject
+                    name={project.name}    
+                />
             ))
 
 
@@ -47,6 +54,13 @@ class ProjectList extends React.Component {
 
 
 const mapStateToProps = state => ({
-    nameNew: state.projectState.nameNew
+    nameNew: state.projectState.nameNew,
+    list: state.clickState.list
 })
-export default connect(mapStateToProps)(ProjectList)
+
+const mapDispatachToProps = dispatch => bindActionCreators({
+    generateList
+},dispatch)
+
+
+export default connect(mapStateToProps, mapDispatachToProps)(ProjectList)

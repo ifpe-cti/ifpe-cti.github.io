@@ -1,5 +1,5 @@
 const initialState = {
-    newValue: 'Atualizado via Redux!'
+    newValue: 'sAtualizado via Redux!'
   };
   
   export const clickReducer = (state = initialState, action) => {
@@ -9,6 +9,11 @@ const initialState = {
           ...state,
           newValue: action.newValue
         };
+      case 'GENERATE_LIST_REPOSITORY':
+        return {
+          ...state,
+          list: action.payload
+        }
       default:
         return state;
     }
