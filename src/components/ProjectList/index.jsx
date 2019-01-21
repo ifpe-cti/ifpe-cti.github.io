@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import { generateList } from '../../actions/ProjectActions'
 import { ContainerCardProject } from './styles'
+import moment from 'moment'
 
 class ProjectList extends React.Component {
 
@@ -23,7 +24,7 @@ class ProjectList extends React.Component {
                         name={project.name}
                         language={project.language === null ? "não informado" : project.language}
                         license={project.license === null ? "não informado" : project.lincense}
-                        createdAt={project.created_at}
+                        createdAt={moment(project.created_at).format('DD/MM/YYYY')}
                         description={project.description}
                         svn_url={project.svn_url}
                     />
@@ -41,7 +42,7 @@ class ProjectList extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    list: state.clickState.list
+    list: state.projectState.list
 })
 
 const mapDispatachToProps = dispatch => bindActionCreators({
