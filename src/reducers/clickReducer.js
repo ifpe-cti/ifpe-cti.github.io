@@ -14,6 +14,11 @@ const initialState = {
           ...state,
           list: action.payload
         }
+      case 'CONTRIBUTORS_PROJECT':
+        return {
+          ...state,
+          contributorsName: action.payload
+        }
       default:
         return state;
     }

@@ -8,15 +8,6 @@ export const Card = styled.div`
     margin: 5px;
 `
 
-export const Container = styled.div`
-    width: 100%; 
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 0;
-`
-
 export const ContainerAction = styled.div`
     display: flex;
     justify-content: center;
